@@ -8,8 +8,8 @@ $(document).ready(function() {
       margin: { top: "2cm", left: "1cm", right: "1cm", bottom: "1cm" },
       landscape: true,
       repeatHeaders: true,
-      template: $("#page-template").html(),
-      scale: 0.8
+      scale: 0.8,
+      fileName: "Kendo UI Grid Export.pdf"
     },
     excel: {
       fileName: "Kendo UI Grid Export.xlsx",
@@ -36,21 +36,22 @@ $(document).ready(function() {
     resizable: true,
     sortable: true,
     filterable: true,
+    columnMenu: true,
+    resizable: true,
     pageable: {
-      input: true,
-      numeric: false
+      input: false,
+      numeric: true
     },
     columns: [
       "ProductName",
       {
         field: "UnitPrice",
         title: "Unit Price",
-        format: "{0:c}",
-        width: "130px"
+        format: "{0:c}"
       },
-      { field: "UnitsInStock", title: "Units In Stock", width: "130px" },
-      { field: "Discontinued", width: "130px" },
-      { command: ["edit", "destroy"], title: "&nbsp;", width: "250px" }
+      { field: "UnitsInStock", title: "Units In Stock" },
+      { field: "Discontinued" },
+      { command: ["edit", "destroy"], title: "&nbsp;" }
     ],
     editable: "inline"
   });
