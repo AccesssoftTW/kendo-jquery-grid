@@ -44,11 +44,7 @@ $(document).ready(function() {
     },
     columns: [
       "ProductName",
-      {
-        field: "UnitPrice",
-        title: "Unit Price",
-        format: "{0:c}"
-      },
+      { field: "UnitPrice", title: "Unit Price", format: "{0:c}" },
       { field: "UnitsInStock", title: "Units In Stock" },
       { field: "Discontinued" },
       { command: ["edit", "destroy"], title: "&nbsp;" }
