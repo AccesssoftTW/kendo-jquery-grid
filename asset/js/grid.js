@@ -38,10 +38,7 @@ $(document).ready(function() {
     filterable: true,
     columnMenu: true,
     resizable: true,
-    pageable: {
-      input: false,
-      numeric: true
-    },
+    pageable: true,
     columns: [
       "ProductName",
       { field: "UnitPrice", title: "Unit Price", format: "{0:c}" },
