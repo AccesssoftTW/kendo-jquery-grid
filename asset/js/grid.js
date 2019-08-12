@@ -37,7 +37,6 @@ $(document).ready(function() {
     sortable: true,
     filterable: true,
     columnMenu: true,
-    resizable: true,
     pageable: true,
     columns: [
       "ProductName",
